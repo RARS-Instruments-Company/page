@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RARS Instruments Company</title>
+    <link rel="shortcut icon" href="assets/Rars-Logo-HD-Color.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="rars-styles.css">
+    <link rel="stylesheet" href="rars-mediaqueries.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+</head>
+<body>
+    <div id="preloader">
+        <img src="assets/preloader.gif" alt="Loading..." />
+    </div>
+    <div id="app">
+        <header>
+            <figure>
+                <img :src="logo_colored" alt="logo">
+            </figure>
+            <div>
+                <h1>
+                    <span class="font black bold">{{ name }}</span>
+                    <span class="font green bold">{{ type }}</span>
+                </h1>
+                <h4 class="font black">{{ address }}</h4>
+            </div>
+        </header>
+        <main>
+            <section id="hero">
+                <div>
+                    <img src="assets/image3.png" style="width:100%">
+                </div>
+            </section>
+            <section id="about-us">
+                <div class="about-container">
+                    <div class="about-text">
+                        <h2>About Us</h2>
+                        <p>
+                            We are a dental & medical instruments company based in Pakistan, proudly manufacturing 
+                            high-quality metal instruments for the medical sector, with a major focus on dental tools. 
+                        </p>
+                        <p>
+                            As a new startup, we are committed to excellence, delivering precision-crafted instruments to meet the 
+                            highest standards. Our extensive catalog boasts over <strong>1000+ instruments</strong>, designed and 
+                            manufactured in Pakistan.
+                        </p>
+                        <p>
+                            Whether you are looking for reliable dental instruments or other medical tools, we ensure unmatched 
+                            quality that you can trust.
+                        </p>
+                    </div>
+                    <div class="about-image">
+                        <img src="assets/about-us.jpg" alt="About Us">
+                    </div>
+                </div>
+            </section>
+            <section id="who-we-serve">
+                <div class="serve-container">
+                    <h2>Who We Serve</h2>
+                    <p>
+                        RARS Instruments Co. proudly supplies high-quality instruments to a wide range of clients:
+                    </p>
+                    <div class="serve-list">
+                        <div class="serve-item">
+                            <h3>Clinics</h3>
+                            <p>Equipping private and specialized clinics with precision-crafted instruments for exceptional care.</p>
+                        </div>
+                        <div class="serve-item">
+                            <h3>Hospitals</h3>
+                            <p>Supporting hospitals with reliable tools for their surgical and medical needs.</p>
+                        </div>
+                        <div class="serve-item">
+                            <h3>Colleges & Universities</h3>
+                            <p>Delivering premium instruments to dental and medical colleges and universities, empowering the next generation of healthcare professionals.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="customer-form">
+                <div class="form-container">
+                    <h2>Get in Touch</h2>
+                    <p>Fill in your details below, and we will get back to you as soon as possible!</p>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Full Name:</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Company:</label>
+                            <input type="text" id="company" name="company" placeholder="Enter your company" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address:</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Enter your message"></textarea>
+                        </div>
+                        <button type="submit" class="form-submit-button">Submit</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <figure id="logo-footer">
+                <img src="assets/Rars-Logo-HD-BW.png"></img>
+            </figure>
+            <div class="footer-content">
+                <p>&copy; 2025 RARS Instruments Co.</p>
+                <p>Flat 9C, Building 5, J-Sector, Malir Cantt. Karachi, Pakistan</p>
+                <p>Email: <a href="mailto:info@rarsinstruments.com">info@rarsinstruments.com</a> | Phone: <a href="https://api.whatsapp.com/send?phone=923308476009">+92 330 8476009</a></p>
+                <p>Follow us: 
+                    <a href="#">Facebook</a> | 
+                    <a href="#">Twitter</a> | 
+                    <a href="#">LinkedIn</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+    <script src="rars-app.js"></script>
+    <script>
+        // Minimum preloader display time (in milliseconds)
+        const minimumPreloaderTime = 500; // 5 seconds
+    
+        // Record the time when the page starts loading
+        const startTime = Date.now();
+    
+        // Event listener for when the page fully loads
+        window.addEventListener('load', () => {
+            const loadTime = Date.now();
+            const elapsedTime = loadTime - startTime;
+    
+            // Calculate remaining time to reach the minimum preloader time
+            const remainingTime = Math.max(0, minimumPreloaderTime - elapsedTime);
+    
+            // Hide preloader after the remaining time
+            setTimeout(() => {
+                document.getElementById('preloader').style.display = 'none';
+            }, remainingTime);
+        });
+    </script>
+</body>
+</html>

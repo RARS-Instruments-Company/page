@@ -1,0 +1,308 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    background-color: #EFEFEF;
+    font-family: 'Helvetica', Arial, sans-serif;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header figure {
+    flex-shrink: 0;
+    margin: 0;
+}
+
+header figure img {
+    width: 100px;
+    height: auto;
+}
+
+header h1 {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+header h4 {
+    margin-top: 8px;
+    font-size: 0.8rem;
+    color: #333;
+}
+
+/* Font Colors */
+.font {
+    font-family: 'Helvetica', Arial, sans-serif;
+}
+
+.green {
+    color: #4EA72E;
+}
+
+.black {
+    color: #230000;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: #f8f8f8;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 40' width='80' height='40'%3E%3Cpath fill='%234ea72e' fill-opacity='0.11' d='M0 40a19.96 19.96 0 0 1 5.9-14.11 20.17 20.17 0 0 1 19.44-5.2A20 20 0 0 1 20.2 40H0zM65.32.75A20.02 20.02 0 0 1 40.8 25.26 20.02 20.02 0 0 1 65.32.76zM.07 0h20.1l-.08.07A20.02 20.02 0 0 1 .75 5.25 20.08 20.08 0 0 1 .07 0zm1.94 40h2.53l4.26-4.24v-9.78A17.96 17.96 0 0 0 2 40zm5.38 0h9.8a17.98 17.98 0 0 0 6.67-16.42L7.4 40zm3.43-15.42v9.17l11.62-11.59c-3.97-.5-8.08.3-11.62 2.42zm32.86-.78A18 18 0 0 0 63.85 3.63L43.68 23.8zm7.2-19.17v9.15L62.43 2.22c-3.96-.5-8.05.3-11.57 2.4zm-3.49 2.72c-4.1 4.1-5.81 9.69-5.13 15.03l6.61-6.6V6.02c-.51.41-1 .85-1.48 1.33zM17.18 0H7.42L3.64 3.78A18 18 0 0 0 17.18 0zM2.08 0c-.01.8.04 1.58.14 2.37L4.59 0H2.07z'%3E%3C/path%3E%3C/svg%3E");
+    padding: 30px 40px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid #E0E0E0; /* Subtle border for separation */
+}
+
+/* Leaf pattern opacity */
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://heropatterns.com/leaf-pattern.svg');
+    background-color: #4EA72E;
+    opacity: 0.1; /* Very subtle leaf pattern */
+    z-index: -1;
+}
+
+/* Footer Content */
+.footer-content {
+    z-index: 2;
+    position: relative;
+    color: #707070; /* Greyish text for a clean look */
+}
+
+footer p {
+    margin: 8px 0;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #4EA72E; /* Match the green accent */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+#about-us {
+    padding: 50px 20px;
+    background-color: #F8F8F8;
+    display: flex;
+    justify-content: center;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 1200px;
+    gap: 20px;
+}
+
+.about-text {
+    flex: 1;
+    font-family: 'Helvetica', sans-serif;
+    color: #230000;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #4EA72E;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#who-we-serve {
+    padding: 60px 20px;
+    background-color: #F8F8F8;
+    text-align: center;
+    font-family: 'Helvetica', sans-serif;
+}
+
+.serve-container h2 {
+    font-size: 36px;
+    color: #4EA72E;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.serve-container p {
+    font-size: 18px;
+    color: #230000;
+    margin-bottom: 40px;
+}
+
+.serve-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.serve-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.serve-item h3 {
+    font-size: 24px;
+    color: #4EA72E;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.serve-item p {
+    font-size: 16px;
+    color: #230000;
+    line-height: 1.6;
+}
+
+.serve-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Preloader Styles */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000; 
+}
+
+#preloader img {
+    width: 50vw;
+    height: auto;
+}
+
+/* Hero Section Styles */
+#hero {
+    background-color: white; 
+    color: white;
+}
+#logo-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#logo-footer img {
+    width: 4vw;
+    height: auto;
+}
+
+#customer-form {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    font-family: 'Helvetica', sans-serif;
+}
+
+.form-container h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #4EA72E;
+}
+
+.form-container p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #707070;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+.form-submit-button {
+    background-color: #4EA72E;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-submit-button:hover {
+    background-color: #3b8e22;
+}
