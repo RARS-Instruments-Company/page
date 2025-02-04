@@ -286,23 +286,61 @@ footer a:hover {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
+    transition: all 0.3s ease;
 }
 
-.form-group textarea {
-    resize: none;
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
 }
 
+.invalid {
+    border: 1px solid #f00;
+    background-color: #e97878;
+}
+
+/* TOS section styling */
+.tos-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: flex-start;
+}
+
+.tos-group input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.tos-label {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.tos-link {
+    color: #4EA72E;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.tos-link:hover {
+    color: #2e8b21;
+}
+
+/* Submit button */
 .form-submit-button {
     background-color: #4EA72E;
     color: white;
-    padding: 12px 20px;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .form-submit-button:hover {
-    background-color: #3b8e22;
+    background-color: #388f24;
 }
